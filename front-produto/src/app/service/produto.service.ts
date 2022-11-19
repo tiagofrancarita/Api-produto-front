@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class ProdutoService {
 
-  private _URL = environment.url + 'produto'
+  private _URL = environment.url + "produto";
 
   constructor(private http: HttpClient) { }
 

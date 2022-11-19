@@ -8,14 +8,13 @@ import { Injectable } from '@angular/core';
 })
 export class ProdutoService {
 
-  private _URL = environment.url ='produtos'
+  private _URL = environment.url + 'produto'
 
   constructor(private http: HttpClient) { }
 
   buscarTodos(){
 
     return this.http.get<Produto[]>(this._URL);
-
 
   }
 
@@ -28,6 +27,5 @@ export class ProdutoService {
   remover(id: number){
 
     return this.http.delete(`${this._URL}/${id}`);
-
   }
 }

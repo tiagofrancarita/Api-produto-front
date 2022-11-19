@@ -76,6 +76,7 @@ export class AppComponent {
       this.produtoService.remover(idProduto).subscribe({
           next: (res) => {
             alert("Produto excluído com sucesso !")
+            this.buscarProdutos(); // Realiza uma nova busca no banco de dados e atualiza a grid
           },
           error: (error) =>{
             console.log(error);

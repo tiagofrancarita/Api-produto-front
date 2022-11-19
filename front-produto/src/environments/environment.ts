@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  url: 'http://localhost:8080/api/'
+  url: 'http://apiproduto-env.eba-gjevuctk.us-east-1.elasticbeanstalk.com/api/'
 };

@@ -1,1 +1,28 @@
 <app-nav-bar></app-nav-bar>
+
+<br />
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-title"><h4>Cadastro de Produtos</h4></div>
+      <form [formGroup]="produtoForm" (ngSubmit)="salvar()">
+        <div class="formGroup">
+          <label for="nome">Nome</label>
+          <input type="text"class="form-control" id="nome" formControlName="nome">
+        </div>
+        <br />
+        <div class="formGroup">
+          <label for="preco">Preço</label>
+          <input name="preco" type="number"class="form-control" id="preco" formControlName="preco">
+        </div>
+        <br />
+        <div class="formGroup">
+          <label for="descricao">Descrição</label>
+          <textarea name="descricao" id="descricao" formControlName="descricao" rows="3"  class="form-control"></textarea>
+        </div>
+        <br />
+        <button class="btn btn-primary" [disabled]="produtoForm.invalid">Salvar</button>
+      </form>
+    </div>
+  </div>
+</div>

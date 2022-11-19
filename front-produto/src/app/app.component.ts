@@ -10,7 +10,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class AppComponent {
 
-  produtos: Produto[] = [];
 
   produtoForm = this.fb.group({
     id: [null],
@@ -23,10 +22,6 @@ export class AppComponent {
   constructor(
     private fb: FormBuilder,
     private produtoService: ProdutoService){
-    this.buscarProdutos();
-  }
-
-  buscarProdutos() {
 
   }
 

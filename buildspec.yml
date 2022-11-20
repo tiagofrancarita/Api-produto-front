@@ -12,14 +12,14 @@ phases:
   build:
     commands:
       - echo BUILD APLICATION
-      - ng build --configuration=production
+      - ng build --configuration production
   post_build:
     commands:
       - echo INIT POST BUILD
-      - cd dist/front-produto
+      - cd dist/$APP_NAME
       - ls -la
 artifacts:
   files:
     - '**/*'
-  base-directory: dist/front-produto*
+  base-directory: dist/$APP_NAME*
   discard-paths: yes

@@ -16,10 +16,10 @@ phases:
   post_build:
     commands:
       - echo INIT POST BUILD
-      - cd dist/$APP_NAME
+      - cd dist/front-produto
       - ls -la
 artifacts:
   files:
     - '**/*'
-  base-directory: dist/$APP_NAME*
+  base-directory: dist/front-produto*
   discard-paths: yes

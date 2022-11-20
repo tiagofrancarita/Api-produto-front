@@ -12,7 +12,7 @@ phases:
   build:
     commands:
       - echo BUILD APLICATION
-      - ng build --configuration=production
+      - ng build --configuration=development
   post_build:
     commands:
       - echo INIT POST BUILD

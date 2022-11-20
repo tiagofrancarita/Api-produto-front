@@ -5,16 +5,14 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 14
-  pre_build:
+      nodejs: 14.x
     commands:
-      - echo Installing source NPM dependencies...
-      - npm install
-      - npm install -g @angular/cli
+      - echo INSTALL DEPENDENCES
+      - npm install && npm install -g @angular/cli
   build:
     commands:
-      - echo Build started on `date`
-      - ng build --prod --aot
+      - echo BUILD APLICATION
+      - ng build --configuration=production
   post_build:
     commands:
       - echo INIT POST BUILD
